@@ -1,10 +1,7 @@
 package StepDefinition;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
@@ -12,7 +9,6 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -22,12 +18,9 @@ import PageObject.LoginPage;
 import PageObject.SearchCustomerPage;
 import Utitlities.ReadConfig;
 import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
 /*Child class of Baseclass*/
 public class StepDef extends BaseClass {
 
@@ -47,17 +40,17 @@ public class StepDef extends BaseClass {
 		switch(browser.toLowerCase())
 		{
 		case "chrome":
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 			break;
 
 		case "msedge":
-			WebDriverManager.edgedriver().setup();
+			//WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 			break;
 
 		case "firefox":
-			WebDriverManager.firefoxdriver().setup();
+			//WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			break;
 		default:

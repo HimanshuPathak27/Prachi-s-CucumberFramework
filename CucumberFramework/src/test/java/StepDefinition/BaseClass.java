@@ -1,7 +1,5 @@
 package StepDefinition;
 
-import java.util.Properties;
-
 import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 
